@@ -177,6 +177,7 @@ docker-compose up [-d]
   
 
 ## 更新日志
+* 2018-09 增加异构系统认证授权功能
 * 2018-06 spring security登陆验证扩展 手机验证码，二维码扫码登陆、 引入i18n国际化、 集成git配置中心、admin监控、 链路追踪、Springcloud 升级为Edgware，Consul升级为最新1.2  
 * 2018-05 完成基础数据模块开发、 docker容器编排  
 * 2018-05 授权中心整和Jwt、 SpringSecurity，使用 OAuth2 授权  
