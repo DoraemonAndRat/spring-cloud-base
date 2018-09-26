@@ -58,6 +58,7 @@ public class BaseModuleResourceController extends CrudController<BaseModuleResou
 
     @GetMapping("/menu")
     public ResponseData<List<BaseModuleResources>> getCurrentMenu() {
+        System.out.println("--------------/menu----------provider1-------------------------------"+accessTokenUtils.getMenuInfo());
         logger.debug("查询当前用户菜单");
         return new ResponseData<>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMessage(), accessTokenUtils.getMenuInfo());
     }

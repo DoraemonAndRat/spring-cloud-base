@@ -8,13 +8,13 @@ window.serverconf = {
   appSecret: 'test',
   production: {
     // nginx 代理
-    baseUrl: 'http://www.mxclass.cn',
     authUrl: 'http://www.mxclass.cn/auth',
-    baseURL: 'http://www.mxclass.cn'
+    baseURL: 'http://www.mxclass.cn',
+    baseUrl: 'http://www.mxclass.cn'
   },
   development: {
-    baseUrl: 'http://127.0.0.1:8080',
     authUrl: 'http://127.0.0.1:18001/auth',
-    baseURL: 'http://127.0.0.1:18000'
+    baseURL: 'http://127.0.0.1:18000',
+    baseUrl: 'http://127.0.0.1:8080'
   }
 }

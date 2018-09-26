@@ -175,6 +175,7 @@ public class BaseUserController extends CrudController<BaseUser, BaseUserRequest
 
     @PostMapping("/user/role")
     public ResponseData<BaseUser> saveUserRole(@RequestBody List<BaseUserRole> baseUserRoleList) {
+        System.out.println("------------------------provider1-------------------------------"+baseUserRoleList);
         logger.debug("保存用户授权角色");
         try {
             baseUserRoleService.saveUserRole(baseUserRoleList);

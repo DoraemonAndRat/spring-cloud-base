@@ -5,19 +5,23 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    password: '000000'
-    username: fangp
+    password: guest
+    username: guest
 
 zuul:
   routes:
     main-data:
       path: /api/main-data/**
       serviceId: main-data
+    main-data2:
+      path: /api/main-data2/**
+      serviceId: main-data2
 
 proxy:
   auth:
     routes:
       main-data: oauth2
+      main-data2: oauth2
 
 security:
   ignored: |

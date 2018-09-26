@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target: 'http://127.0.0.1:18000',
+        target: 'http://127.0.0.1:18000', //gateway
         changeOrigin: true // 必须，为true的话，请求的header将会设置为匹配目标服务器的规则（Access-Control-Allow-Origin）
       }
     },

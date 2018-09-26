@@ -1,0 +1,13 @@
+https://www.cnblogs.com/fp2952/p/8933107.html
+
+--1
+robbitmq
+D:\soft\redis_win
+D:\soft\consul_1.2.3_windows_amd64>consul agent -dev
+
+
+
+http://127.0.0.1:8080/#/role
+
+
+

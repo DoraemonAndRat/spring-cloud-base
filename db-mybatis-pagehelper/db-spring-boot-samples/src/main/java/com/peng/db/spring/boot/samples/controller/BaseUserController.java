@@ -1,7 +1,5 @@
 package com.peng.db.spring.boot.samples.controller;
 
-import com.github.pagehelper.PageInfo;
-import com.peng.db.spring.boot.autoconfigure.controller.CrudController;
 import com.peng.db.spring.boot.samples.mapper.model.BaseUser;
 import com.peng.db.spring.boot.samples.service.BaseUserService;
 import org.springframework.beans.factory.annotation.Autowired;

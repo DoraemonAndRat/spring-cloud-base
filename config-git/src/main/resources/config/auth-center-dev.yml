@@ -14,8 +14,8 @@ spring:
   datasource:
     druid:
       url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-      username: fangp
-      password: "000000"
+      username: root
+      password: root
       driver-class-name: com.mysql.jdbc.Driver
       max-active: 20
       initial-size: 1
@@ -44,7 +44,7 @@ spring:
   rabbitmq:
       host: localhost
       port: 5672
-      username: fangp
-      password: '000000'
+      username: guest
+      password: guest
 logging:
   file: logs/auth-center.log

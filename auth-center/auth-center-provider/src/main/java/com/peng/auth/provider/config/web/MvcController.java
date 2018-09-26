@@ -2,7 +2,6 @@ package com.peng.auth.provider.config.web;
 
 import com.peng.common.pojo.ResponseData;
 import com.peng.main.api.pojo.ResponseCode;
-import com.peng.main.client.BaseClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,7 +24,11 @@ import java.util.Map;
 public class MvcController {
 
     @Autowired
-    private BaseClientService baseClientService;
+    private com.peng.main.client.BaseClientService baseClientService;
+
+
+    @Autowired
+    private com.peng.main.client1.BaseClientService2 baseClientService2;
 
     /**
      * 登出回调
@@ -79,7 +82,16 @@ public class MvcController {
                 .getUsername();
         model.put("userName", userName);
         // 获取全部客户端应用
-        ResponseData responseData = baseClientService.getAllClient();
+        //多个客户端 TODO ?
+        ResponseData responseData=null;
+        if(null!=baseClientService.getAllClient()) {
+            responseData = baseClientService.getAllClient();
+            System.out.println("====baseClientService=====");
+        }else {
+            responseData = baseClientService2.getAllClient();
+            System.out.println("====baseClientService2=====");
+        }
+
         if(ResponseCode.SUCCESS.getCode().equals(responseData.getCode()) && responseData.getData() != null) {
             model.put("client",responseData.getData());
         } else {

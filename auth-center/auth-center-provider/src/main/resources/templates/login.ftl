@@ -62,14 +62,14 @@
                 <div class="field item">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input id="username" name="username" placeholder="用户名" value="test">
+                        <input id="username" name="username" placeholder="用户名" value="admin">
                         <input type="text" name="type" value="user" hidden>
                     </div>
                 </div>
                 <div class="field item" style="height: 80px">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" id="password" name="password" placeholder="密码" value="123456">
+                        <input type="password" id="password" name="password" placeholder="密码" value="admin0">
                     </div>
                     <div class="other">忘记密码？试试 &nbsp;<a href="javascript:void(0);" onclick="change_yzm()"><i class="mobile icon"></i>验证码登陆</a>|<a><i class="qrcode icon"></i>扫码登陆</a></div>
                 </div>

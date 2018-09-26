@@ -5,4 +5,6 @@ package com.peng.main.api;
  */
 public class InterfaceService {
     public static final String SERVICE_NAME = "main-data";
+
+    public static final String SERVICE_NAME2 = "main-data2";
 }

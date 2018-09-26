@@ -90,9 +90,15 @@ public class AccessDecisionManagerIml  implements AccessDecisionManager {
         while (iterator.hasNext())
         {
             BaseModuleResources e = iterator.next();
+            System.out.println("-------------------------------applicationName:"+applicationName+"  e.getProjectName():"+e.getProjectName());
+
             // 匹配当前应用的资源
             if(applicationName.equals(e.getProjectName())) {
+                System.out.println("-------------------------------e.getIsOperating():"+e.getIsOperating()+"  e.getActive():"+e.getActive()+" e.getModulePath():"+e.getModulePath());
+
                 if (e.getIsOperating() == 1 && e.getActive() == 1 && e.getModulePath() != null && !"".equals(e.getModulePath())) {
+
+                    System.out.println("-------------------------------返回 matchUrl:"+matchUrl(url, e.getModulePath())+" httpMethod:"+e.getHttpMethod().toUpperCase()+" "+httpMethod.toUpperCase());
                     if (matchUrl(url, e.getModulePath()) && httpMethod.toUpperCase().equals(e.getHttpMethod().toUpperCase())) {
                         return true;
                     }
@@ -110,7 +116,7 @@ public class AccessDecisionManagerIml  implements AccessDecisionManager {
     }
 
     private boolean matchUrl(String url, String modulePath) {
-
+        System.out.println("-------------------------------url:"+url+" modulePath:"+modulePath);
         List urls = Arrays.asList(url.split("/")).stream().filter(e -> !"".equals(e)).collect(Collectors.toList());
         Collections.reverse(urls);
 

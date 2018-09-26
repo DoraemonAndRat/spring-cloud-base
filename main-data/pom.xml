@@ -15,6 +15,7 @@
     <modules>
         <module>main-data-api</module>
         <module>main-data-provider</module>
+        <module>main-data-provider2</module>
         <module>main-data-client</module>
     </modules>
 

@@ -8,3 +8,7 @@ target/
 .settings/
 .classpath
 logs
+node_modules/
+.git
+node_modules
+*.iml

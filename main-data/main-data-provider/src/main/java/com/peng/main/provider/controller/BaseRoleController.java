@@ -68,6 +68,7 @@ public class BaseRoleController extends CrudController<BaseRole, BaseRoleRequest
     @PostMapping("/role/table")
     @Override
     protected ResponseData<TableData<BaseRole>> queryRecord(@RequestBody BaseRoleRequest query) {
+        System.out.println("------------------------provider1-------------------------------"+query);
         logger.debug("查询角色表格");
         Example example = new Example(BaseRole.class);
         Example.Criteria criteria = example.createCriteria();

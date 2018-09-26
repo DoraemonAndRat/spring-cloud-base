@@ -78,9 +78,14 @@ JDK8、 Maven、 Mysql、 Redis、Consul、 Rabbitmq、Nodejs、 Docker(可选)�
 1. git clone https://github.com/fp2952/spring-cloud-base.git
 1. Mysql导入数据： 运行main-data/schema.sql 文件；    
 2. 更改配置文件，此项目默认本地配置，更改 config-git/src/main/resource/config 下的配置文件，主要需修改数据库链接、 Redis链接、 Rabbitmq链接等；     
-3. 启动 Consul (下载地址： https://www.consul.io/downloads.html)， window下载解压完为exe可执行文件, 进入其文件夹下 cmd -> consul agent -dev 启动，此时可访问 http://localhost:8500 查看Consul Ui页面；    
+3. 启动 Consul (下载地址： https://www.consul.io/downloads.html)， window下载解压完为exe可执行文件, 进入其D:\soft\consul_1.2.3_windows_amd64文件夹下 cmd -> consul agent -dev 启动，此时可访问 http://localhost:8500 查看Consul Ui页面；    
 4. 启动redis、 Rabbitmq；  
-5. 依此启动 config-git/ConfigServerApplication.main(配置中心)、auth-center/auth-center-provider/AuthCenterProviderApplication.main(服务授权中心)、 api-gateway/ApiGatewayApplication.main()(网关负载中心)、 main-data/main-data-provider/MainDataApplication.main()(基础数据模块)，注意启动顺序，配置中心必须最先启动，网关和基础数据模块依赖授权模块的 jwt/key-uri point；启动后可在Consul图形界面上即可看到已注册的服务;  
+5. 依此启动 
+ config-git/ConfigServerApplication.main(配置中心)
+ auth-center/auth-center-provider/AuthCenterProviderApplication.main(服务授权中心)
+ api-gateway/ApiGatewayApplication.main()(网关负载中心)
+ main-data/main-data-provider/MainDataApplication.main()(基础数据模块)
+ 注意启动顺序，配置中心必须最先启动，网关和基础数据模块依赖授权模块的 jwt/key-uri point；启动后可在Consul图形界面上即可看到已注册的服务;  
 6. 前端Vue项目需node环境（https://nodejs.org/en/download/), cd web-app、安装依赖 npm install、 启动项目 npm dev run , 需更改后端接口地址， /static/config.js/window.serverconf/development  
  
 
