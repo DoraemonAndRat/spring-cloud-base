@@ -69,13 +69,14 @@ phone: 13100000000 verifyCode: 1000
 * common  
 * db-spring-boot-starter   
 * auth-spring-boot-starter  
+* 异构系统统一登陆  (https://blog.csdn.net/luozhonghua2014/article/details/82857684)
 
 
 ## Quick Start  
 ### 依赖环境    
 JDK8、 Maven、 Mysql、 Redis、Consul、 Rabbitmq、Nodejs、 Docker(可选)、 docker-compose(可选)  
 ### 运行步骤  
-1. git clone https://github.com/fp2952/spring-cloud-base.git
+1. git clone https://github.com/luozhonghua/spring-cloud-base.git
 1. Mysql导入数据： 运行main-data/schema.sql 文件；    
 2. 更改配置文件，此项目默认本地配置，更改 config-git/src/main/resource/config 下的配置文件，主要需修改数据库链接、 Redis链接、 Rabbitmq链接等；     
 3. 启动 Consul (下载地址： https://www.consul.io/downloads.html)， window下载解压完为exe可执行文件, 进入其D:\soft\consul_1.2.3_windows_amd64文件夹下 cmd -> consul agent -dev 启动，此时可访问 http://localhost:8500 查看Consul Ui页面；    
@@ -177,7 +178,7 @@ docker-compose up [-d]
   
 
 ## 更新日志
-* 2018-09 增加异构系统认证授权功能
+* 2018-09 增加异构系统认证授权功能(最新数据库加作者QQ172257861)
 * 2018-06 spring security登陆验证扩展 手机验证码，二维码扫码登陆、 引入i18n国际化、 集成git配置中心、admin监控、 链路追踪、Springcloud 升级为Edgware，Consul升级为最新1.2  
 * 2018-05 完成基础数据模块开发、 docker容器编排  
 * 2018-05 授权中心整和Jwt、 SpringSecurity，使用 OAuth2 授权  
